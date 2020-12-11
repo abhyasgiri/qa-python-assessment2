@@ -30,7 +30,20 @@
 	# How does a for loop iterate through a string?
 
 def one(input):
-	return ""
+	string = ""
+	for char in range(len(input)):
+		string += input[char]*3
+	return string 
+
+#def one(input):
+#	string = ""
+#	for i in range(len(input)):
+#		string += char
+#		string += char
+#		string += char
+#		return string 
+
+#only returns TTT
 
 	# <QUESTION 2>
 
@@ -48,7 +61,20 @@ def one(input):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(input):
-    return False
+	if input > 1:
+		for i in range(2, input):
+			if (input % i) == 0:
+				return False
+			else:
+				return True
+
+
+#def two(input):
+#	if input/1 == input:
+#		if input % input == 0:
+#			return True 
+#	else:
+#		return False
 
 	# <QUESTION 3>
 
@@ -65,7 +91,13 @@ def two(input):
 	# What happens if you multiply a string by a number?
 
 def three(a):
-	return 1
+	n1 = str(a) * 1
+	n2 = str(a) * 2
+	n3 = str(a) * 3
+	n4 = str(a) * 4
+
+	total = int(n1) + int(n2) + int(n3) + int(n4)
+	return total
 
 	# <QUESTION 4>
 
@@ -94,6 +126,7 @@ def three(a):
 	# How would you seperate a string into characters?
 
 def four(input1, input2):
+
 	return ""
 
 	# <QUESTION 5>
@@ -130,7 +163,18 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+	lower_input = input.lower()
+	if lower_input[-2:] == "py":
+		return True
+	else:
+		return False
+
+#def six(input):
+#	if input[-1] == "y" or "Y":
+#		if input[-2] == "p" or "P":
+#			return True 
+#	else:
+#		return False
 
 	# <QUESTION 7>
 
@@ -188,8 +232,22 @@ def eight(input,  a):
 	# <HINT> 
 	# There are no hints for this question.
 
+#def nine(string1, string2):
+#	str1_list = list(str1)
+#	str1_list.sort()
+#	str2_list = list(str2)
+#	str2_list.sort()
+#
+#	return (str1_list == str2_list)
+#	return False
+
 def nine(string1, string2):
-    return False
+	if sorted(string2) in sorted(string1):
+		return True
+	elif sorted(string1) in sorted(string2):
+		return True
+	else:
+		return False
 
 	# <QUESTION 10>
 
